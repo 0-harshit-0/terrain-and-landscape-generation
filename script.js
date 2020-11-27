@@ -1,5 +1,5 @@
 import * as THREE from 'https://unpkg.com/three@0.123.0/build/three.js';
-import { OrbitControls } from 'https://unpkg.com/three@0.123.0/examples/js/controls/OrbitControls.js';
+import { OrbitControls } from 'https://unpkg.com/three@0.123.0/examples/jsm/controls/OrbitControls.js';
 
 
 function fade(t) {
