@@ -25,7 +25,7 @@ let temp = new Array();
 let inc = canvas.width;
 function animate() {
 	inc += 2;
-	temp.push(new Points(inc, perlin(xOff, yOff)*400));
+	temp.push(new Points(inc, perlin(xOff, yOff)*200));
 	xOff+= 0.01;
 	yOff += 0.01;
 	//requestAnimationFrame(animate);
