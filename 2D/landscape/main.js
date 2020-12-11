@@ -20,13 +20,13 @@ let canvas = document.querySelector('#canvas');
 let ctx = canvas.getContext('2d');
 let s = new Shapes(ctx);
 
-canvas.width = innerWidth;
-canvas.height = innerHeight;
+canvas.width = innerWidth/1.5;
+canvas.height = innerHeight/1.5;
 
 
 addEventListener('resize', function(e) {
-	canvas.width = innerWidth;
-	canvas.height = innerHeight;
+	canvas.width = innerWidth/1.5;
+	canvas.height = innerHeight/1.5;
 });
 
 
