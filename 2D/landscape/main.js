@@ -20,8 +20,8 @@ let canvas = document.querySelector('#canvas');
 let ctx = canvas.getContext('2d');
 let s = new Shapes(ctx);
 
-canvas.width = 400;
-canvas.height = 400;
+canvas.width = innerWidth;
+canvas.height = innerHeight;
 
 
 addEventListener('resize', function(e) {
@@ -30,13 +30,13 @@ addEventListener('resize', function(e) {
 });
 
 
-let inc = 0;
+let inc = 0, wh = 5;
 function animation() {
 	
 	//xOff[i] -= 0.5;
 	
-	for (var x = 0; x < canvas.width; x+=2) {
-		for (var y = 0; y < canvas.height; y+=2) {
+	for (var x = 0; x < canvas.width; x+=wh) {
+		for (var y = 0; y < canvas.height; y+=wh) {
 			let amp = 1;
 			let fre = 1;
 			let noiseHeight = 0;
@@ -46,7 +46,7 @@ function animation() {
 				amp *= persistance;
 				fre *= lacunarity;
 			}
-			s.circle(x, y, 1);
+			s.box(x, y, wh, wh);
 			if (noiseHeight < 0) {
 				s.fill('rgb(0,90,255, 0.8)');
 				//console.log(noiseHeight);
